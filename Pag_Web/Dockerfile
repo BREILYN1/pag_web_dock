@@ -1,13 +1,11 @@
-FROM node:14
+FROM asp.net:
 
-COPY . ./
+WORKDIR /app   
 
-WORKDIR /usr/src/
+RUN apt update
 
-RUN npm install
+COPY [".","/usr/src/"]
 
-COPY [".", "/usr/src/"]
+EXPOSE 8888
 
-EXPOSE 8080
-
-CMD ["node", "."]
+CMD ["ubuntu", "Index.cshtml" ]
