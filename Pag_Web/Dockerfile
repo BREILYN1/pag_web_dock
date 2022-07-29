@@ -1,4 +1,4 @@
-FROM asp.net:
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1 AS base
 
 WORKDIR /app   
 
@@ -8,4 +8,3 @@ COPY [".","/usr/src/"]
 
 EXPOSE 8888
 
-CMD ["ubuntu", "Index.cshtml" ]
