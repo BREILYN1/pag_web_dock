@@ -4,7 +4,7 @@ WORKDIR /usr/src
 
 RUN touch /usr/src/pag_web
 
-COPY [".","/usr/src/Index.cshtml.cs"]
+COPY [".","/usr/src/Index.cshtml"]
 
 EXPOSE 8888 
  
