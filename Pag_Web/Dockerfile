@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.1 AS base
 
-WORKDIR /app   
+WORKDIR /usr/src  
 
-RUN apt update
+RUN touch /usr/src/pag_web
 
-COPY [".","/usr/src/"]
+COPY [".","/usr/src/Index.cshtml.cs"]
 
-EXPOSE 8888
-
+EXPOSE 8888 
+ 
